@@ -23,21 +23,27 @@
 <script type="text/babel">
     const Film = (props) => {
         return (
-            <div className = "Film">
-                <h1>{props.name}</h1>
-                <p>Year of film release: {props.age}</p>
+            <div className="Film">
+                <a href=""><h1 >{props.name}</h1></a>
+                <p>Сountry: {props.country}</p>
+                <p>Year of film release: {props.year}</p>
+                <img widht="100" src={props.img} alt={`Film ${props.name}`}/>
             </div>
         );
     };
 
     const film = (
         <>
-            <Film name ="" age=""/>
-            <Film name="" age=""/>
+            <Film name ="Гнев" year="2021" country="Великобритания" img="https://kinogo.biz/uploads/mini/minifull/159/1619553978_610x900_45349.webp" />
+            <Film name ="Дюна 2" year="2024" country="USA, Canada" img="https://kinogo.biz/uploads/mini/minifull/db9/1709064741-805731091.webp" />
+            <Film name ="Дикий" year="2023" country="Турция" img="https://kinogo.biz/uploads/mini/minifull/296/1704893034-2140623867.webp" />
+            <Film name ="Дом у дороги" year="2024" country="USA" img="https://kinogo.biz/uploads/mini/minifull/2e9/1711080794-1557249954.webp" />
+            <Film name ="Годзилла" year="2024" country="USA" img="https://kinogo.biz/uploads/mini/minifull/048/1711656698-1158400637.webp" />
         </>
     );
 
     ReactDOM.render(film, document.getElementById('app'));
+
 </script>
 
 </body>
