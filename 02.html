@@ -13,12 +13,59 @@
     const Header = () => {
         return(
             <header>
-                <h1>Цветочная BFlowers</h1>
+                <h1>Цветочная FittyFlowers 💐</h1>
             </header>
         );
     };
 
-    ReactDOM.render(<Header />, document.getElementById('app'));
+    const Sidebar = () => {
+        return (
+            <asaid>
+                <h2>Меню навигации</h2>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Готовые букеты</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Адресс</a></li>
+                </ul>
+            </asaid>
+        );
+    };
+
+    const Content = () => {
+        return (
+          <div className="content">
+              <h2>Добро пожаловать в нашу цветочную!</h2>
+              <p>Здесь вы найдете много красивых букетов.</p>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvekDvifbFtFq9ot_5zyowtM_K02OAI7efgg&s"/>
+          </div>
+        );
+    };
+
+    const Footer = () => {
+        return (
+            <footer>
+            <p>© FittyFlowers 2024</p>
+        </footer>
+      );
+    };
+
+    const App = () => {
+        return(
+           <div>
+               <Header/>
+               <div className="main">
+                   <Sidebar/>
+                   <Content/>
+               </div>
+               <Footer/>
+           </div>
+        );
+    };
+
+
+    ReactDOM.render(<App />, document.getElementById('app'));
 </script>
 </body>
 </html>
