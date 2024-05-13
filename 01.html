@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .Film {
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 2px #ccc;
+            width: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+    const Film = (props) => {
+        return (
+            <div className = "Film">
+                <h1>{props.name}</h1>
+                <p>Year of film release: {props.age}</p>
+            </div>
+        );
+    };
+
+    const film = (
+        <>
+            <Film name ="" age=""/>
+            <Film name="" age=""/>
+        </>
+    );
+
+    ReactDOM.render(film, document.getElementById('app'));
+</script>
+
+</body>
+</html>
